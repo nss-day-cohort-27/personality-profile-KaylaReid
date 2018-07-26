@@ -23,30 +23,34 @@ const kayla = {
     },
     people: [
         {
-            name: "Queen Elizabeth"
+            name: "Queen Elizabeth",
+            image: "https://storage.googleapis.com/neris/public/images/types/famous/sentinels_ISFJ_queen_elizabeth_II.svg"
         },
         {
-            name: "Beyonce"
+            name: "Beyonce",
+            image: "https://storage.googleapis.com/neris/public/images/types/famous/sentinels_ISFJ_beyonce.svg"
         },
         {
-            name: "Dr. Watson aka Sherlock Holmes"
+            name: "Dr. Watson aka Sherlock Holmes",
+            image: "https://storage.googleapis.com/neris/public/images/types/famous/sentinels_ISFJ_dr_watson_sherlock_holmes.svg"
         },
         {
-            name: "Pam Beesly"
+            name: "Pam Beesly",
+            image: "https://storage.googleapis.com/neris/public/images/types/famous/sentinels_ISFJ_pam_beesly_the_office.svg"
         }
     ],
     communication: { 
         sib: [
             "How would I communicate best with my little sib.",
-            "I prefer to communicate verbally"
+            "I prefer to communicate verbally."
         ],
         instructors: [
             "How would I like my instructors to communicate with me.",
-            "Vebally and with context behind what is being taught, I learn best when I know the why behind how things work, I also appreciate seeing practical/common uses for what we are learning"
+            "Vebally and with context behind what is being taught, I learn best when I know the why behind how things work, I also appreciate seeing practical/common uses for what we are learning."
         ],
         teammates: [
-            "How would I like my teammates to communicate with me",
-            "Kindly and with respect for the whole team"
+            "How would I like my teammates to communicate with me.",
+            "Kindly and with respect for the whole team."
         ]
 
     }
