@@ -8,9 +8,10 @@ const loadDatabase = function (localStorageKey) {
 
     // Use JSON.parse() to convert the string back into an object
     return JSON.parse(databaseString)
+
 }
 
-console.log(loadDatabase("kayla"));
+let kaylaData = loadDatabase("kayla");
 
 
 // grab body and hold it in a variable
@@ -32,8 +33,8 @@ body.insertBefore(div, script);
 let mainContent = document.querySelector(".main-content");
 
 // these variables hold my tunnel to the part of the array I want to target and pass to my function
-let agree = kayla.general.agree;
-let whyIAgree = kayla.general.whyIAgree;
+let agree = kaylaData.general.agree;
+let whyIAgree = kaylaData.general.whyIAgree;
 
 // creating an empty div gives you a parent container to put eveything your loop spits out in.
 // Define it outside of function to prevent it from printing everytime you call you function.
@@ -45,10 +46,10 @@ function writeToDom(part1, part2) {
     // creating an empty div gives you a parent container for eveything your loop spits out
     let generalDiv = document.querySelector(".general");
 
-    for (let i = 0; i < kayla.general[part1].length; i++) {
+    for (let i = 0; i < kaylaData.general[part1].length; i++) {
         // target said empy div created above to give these things a parent for flexing
-        generalDiv.innerHTML += `<div><h2>${kayla.general[part1][i]}</h2>
-        <h3>${kayla.general[part2][i]}</h3></div>`
+        generalDiv.innerHTML += `<div><h2>${kaylaData.general[part1][i]}</h2>
+        <h3>${kaylaData.general[part2][i]}</h3></div>`
     }
 }
 writeToDom("agree", "whyIAgree");
@@ -60,17 +61,17 @@ function writeToDom2() {
     <div class="people">
     </div>`
     let peopleDiv = document.querySelector(".people");
-    for (let i = 0; i < kayla.people.length; i++) {
+    for (let i = 0; i < kaylaData.people.length; i++) {
         peopleDiv.innerHTML += 
-        `<div><img src="${kayla.people[i].image}" alt="${kayla.people[i].name}" class="image"> 
-        <h3 class="imageName">${kayla.people[i].name}</h3></div>`
+        `<div><img src="${kaylaData.people[i].image}" alt="${kaylaData.people[i].name}" class="image"> 
+        <h3 class="imageName">${kaylaData.people[i].name}</h3></div>`
     }
 }
 writeToDom2();
 
-let sib = kayla.communication.sib;
-let instructors = kayla.communication.instructors;
-let teammates = kayla.communication.teammates;
+let sib = kaylaData.communication.sib;
+let instructors = kaylaData.communication.instructors;
+let teammates = kaylaData.communication.teammates;
 
 mainContent.innerHTML += `<h2 class="headers">Communication Style</h2>
 <div class="communication">
@@ -82,9 +83,9 @@ mainContent.innerHTML += `<h2 class="headers">Communication Style</h2>
 function writeToDom3(thing) {
     let list = document.querySelector(".list")
 
-    for (let i = 0; i < kayla.communication[thing].length; i++) {
+    for (let i = 0; i < kaylaData.communication[thing].length; i++) {
         
-        list.innerHTML += `<li>${kayla.communication[thing][i]}</li>`
+        list.innerHTML += `<li>${kaylaData.communication[thing][i]}</li>`
     }
 }
 writeToDom3("sib");
