@@ -37,7 +37,7 @@ let whyIAgree = kayla.general.whyIAgree;
 
 // creating an empty div gives you a parent container to put eveything your loop spits out in.
 // Define it outside of function to prevent it from printing everytime you call you function.
-mainContent.innerHTML += `<h1>Personality Traits</h1>
+mainContent.innerHTML += `<h1 class="headers">Personality Traits</h1>
 <div class="general">
 </div>`
 
@@ -56,14 +56,14 @@ writeToDom("disagree", "whyIDisagree");
 
 
 function writeToDom2() {
-    mainContent.innerHTML += `<h2>People with my personality traits</h2>
+    mainContent.innerHTML += `<h2 class="headers">People with my personality traits</h2>
     <div class="people">
     </div>`
     let peopleDiv = document.querySelector(".people");
     for (let i = 0; i < kayla.people.length; i++) {
         peopleDiv.innerHTML += 
-        `<img src="${kayla.people[i].image}" alt="${kayla.people[i].name}"> 
-        <h3>${kayla.people[i].name}</h3>`
+        `<div><img src="${kayla.people[i].image}" alt="${kayla.people[i].name}" class="image"> 
+        <h3 class="imageName">${kayla.people[i].name}</h3></div>`
     }
 }
 writeToDom2();
@@ -72,31 +72,21 @@ let sib = kayla.communication.sib;
 let instructors = kayla.communication.instructors;
 let teammates = kayla.communication.teammates;
 
-mainContent.innerHTML += `<h2>Communication Style</h2>
+mainContent.innerHTML += `<h2 class="headers">Communication Style</h2>
 <div class="communication">
+<dl class="list">
+</dl>
 
 </div>`
 
 function writeToDom3(thing) {
-    let communication = document.querySelector(".communication")
+    let list = document.querySelector(".list")
 
     for (let i = 0; i < kayla.communication[thing].length; i++) {
         
-        communication.innerHTML += `<p>${kayla.communication[thing][i]}</p>`
+        list.innerHTML += `<li>${kayla.communication[thing][i]}</li>`
     }
 }
 writeToDom3("sib");
 writeToDom3("instructors");
 writeToDom3("teammates");
-
-// function writeToDom3(arg) {
-//     let communication = document.querySelector(".communication")
-
-//     for (let i = 0; i < arg.length; i++) {
-        
-//         communication.innerHTML += `<p>${arg[i]}</p>`
-//     }
-// }
-// writeToDom3("sib");
-// writeToDom3("instructors");
-// writeToDom3("teammates");

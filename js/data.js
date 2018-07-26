@@ -41,15 +41,15 @@ const kayla = {
     ],
     communication: { 
         sib: [
-            "How would I communicate best with my little sib.",
+            "How would I communicate best with my little sib?",
             "I prefer to communicate verbally."
         ],
         instructors: [
-            "How would I like my instructors to communicate with me.",
+            "How would I like my instructors to communicate with me?",
             "Vebally and with context behind what is being taught, I learn best when I know the why behind how things work, I also appreciate seeing practical/common uses for what we are learning."
         ],
         teammates: [
-            "How would I like my teammates to communicate with me.",
+            "How would I like my teammates to communicate with me?",
             "Kindly and with respect for the whole team."
         ]
 

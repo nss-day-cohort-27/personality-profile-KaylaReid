@@ -1,0 +1,57 @@
+/* header styles */
+.headers {
+    text-align: center;
+    background: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/background-kalender-keren-4.jpg) no-repeat;
+    background-size: cover;
+    border-radius: .5em; 
+    padding: .5em;
+    font-size: 2em;
+}
+
+/* general section */
+.general {
+    border: solid black 2px;
+    border-radius: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(43, 177, 177);
+}
+
+/* people section */
+.people {
+    background-color: dimgray;
+    border: solid black 2px;
+    border-radius: 2.5em;
+    /* padding: 2em; */
+    display: flex;
+    justify-content: center;
+}
+.people div {
+    width: 20%;
+    margin: 1em;
+}
+.people h3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image {
+    max-height: 300px;
+}
+.list {
+    text-align: center;
+    font-size: 1.3em;
+    list-style: square;
+}
+li:nth-child(2) {
+    list-style: none;
+    color: rgb(18, 145, 145);
+}
+li:nth-child(4) {
+    list-style: none;
+    color: rgb(18, 145, 145);
+}
+li:nth-child(6) {
+    list-style: none;
+    color: rgb(18, 145, 145);
+}
